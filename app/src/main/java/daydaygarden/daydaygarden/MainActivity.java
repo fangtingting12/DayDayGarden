@@ -17,6 +17,12 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import daydaygarden.daydaygarden.categoryfragment.CategoryFragment;
+import daydaygarden.daydaygarden.guoshifragment.GuoShiFragment;
+import daydaygarden.daydaygarden.mygardenfragment.MyGardenFragment;
+import daydaygarden.daydaygarden.shopcarfragment.ShopCarFragment;
+import daydaygarden.daydaygarden.shouyefragment.ShouYeFragment;
+
 
 public class MainActivity extends ActionBarActivity implements RadioGroup.OnCheckedChangeListener {
 
@@ -97,15 +103,19 @@ public class MainActivity extends ActionBarActivity implements RadioGroup.OnChec
         Fragment fragment=null;
         switch (checkedId){
             case R.id.radio1:
-
+                fragment= ShouYeFragment.newInstance("","");
                 break;
             case R.id.radio2:
+                fragment= CategoryFragment.newInstance("","");
                 break;
             case R.id.radio3:
+                fragment= MyGardenFragment.newInstance("","");
                 break;
             case R.id.radio4:
+                fragment= ShopCarFragment.newInstance("","");
                 break;
             case R.id.radio5:
+                fragment= GuoShiFragment.newInstance("","");
                 break;
 
         }
